@@ -44,6 +44,7 @@ public class Chocolate extends Candy {
     public String toString() {
         return "Chocolate{" +
                 "isDark=" + isDark +
+                ", Shape=" + getShape() +
                 '}';
     }
 }

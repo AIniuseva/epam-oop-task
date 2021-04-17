@@ -42,6 +42,7 @@ public class PlasticToy extends Toy {
     public String toString() {
         return "PlasticToy{" +
                 "isElectric=" + isElectrical +
+                ", name=" + getName() +
                 '}';
     }
 }

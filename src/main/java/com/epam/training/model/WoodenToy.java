@@ -42,6 +42,7 @@ public class WoodenToy extends Toy {
     public String toString() {
         return "WoodenToy{" +
                 "isColored=" + isColored +
+                ", name=" + getName() +
                 '}';
     }
 }

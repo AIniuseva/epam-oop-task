@@ -3,6 +3,7 @@ package com.epam.training.model;
 import java.util.Objects;
 
 public abstract class AbstractChristmasGift {
+
     private final double price;
     private final double weight;
 

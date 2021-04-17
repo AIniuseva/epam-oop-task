@@ -12,6 +12,5 @@ public class Main {
         ChristmasGiftPrinter giftPrinter = new ChristmasGiftPrinter();
         giftPrinter.printGift(christmasGift);
         giftPrinter.printGift(specialChristmasGift);
-
     }
 }

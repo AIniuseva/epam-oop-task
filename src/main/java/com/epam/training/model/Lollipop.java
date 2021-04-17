@@ -42,6 +42,7 @@ public class Lollipop extends Candy {
     public String toString() {
         return "Lollipop{" +
                 "taste=" + taste +
+                ", Shape=" + getShape() +
                 '}';
     }
 }
