@@ -8,20 +8,24 @@ public class ChristmasGiftLogicImpl implements ChristmasGiftLogic {
     @Override
     public double calculateGiftsPrice(ChristmasGifts christmasGift) {
         double totalPrice = 0;
-
-        for (AbstractChristmasGift gift : christmasGift.getGifts()) {
-            totalPrice += gift.getPrice();
+        if (christmasGift != null) {
+            for (AbstractChristmasGift gift : christmasGift.getGifts()) {
+                totalPrice += gift.getPrice();
+            }
         }
+
         return totalPrice;
     }
 
     @Override
     public double calculateGiftsWeight(ChristmasGifts christmasGift) {
         double totalWeight = 0;
-
-        for (AbstractChristmasGift gift : christmasGift.getGifts()) {
-            totalWeight += gift.getWeight();
+        if (christmasGift != null) {
+            for (AbstractChristmasGift gift : christmasGift.getGifts()) {
+                totalWeight += gift.getWeight();
+            }
         }
+
         return totalWeight;
     }
 }
