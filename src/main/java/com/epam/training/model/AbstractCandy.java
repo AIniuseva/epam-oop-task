@@ -37,19 +37,20 @@ public abstract class AbstractCandy {
             return false;
         }
         AbstractCandy that = (AbstractCandy) o;
-        return Double.compare(that.price, price) == 0 && Double.compare(that.weight, weight) == 0;
+        return Double.compare(that.price, price) == 0 && Double.compare(that.weight, weight) == 0 && shape == that.shape;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(price, weight);
+        return Objects.hash(price, weight, shape);
     }
 
     @Override
     public String toString() {
-        return "AbstractChristmasGIft{" +
+        return "AbstractCandy{" +
                 "price=" + price +
                 ", weight=" + weight +
+                ", shape=" + shape +
                 '}';
     }
 }
