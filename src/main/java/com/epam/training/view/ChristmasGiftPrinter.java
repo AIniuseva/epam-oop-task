@@ -1,13 +1,13 @@
 package com.epam.training.view;
 
-import com.epam.training.model.AbstractChristmasGift;
-import com.epam.training.model.ChristmasGifts;
+import com.epam.training.model.AbstractCandy;
+import com.epam.training.model.ChristmasGift;
 
 public class ChristmasGiftPrinter {
 
-    public void printGift(ChristmasGifts christmasGift) {
+    public void printGift(ChristmasGift christmasGift) {
         System.out.println("Christmas gift:");
-        for (AbstractChristmasGift gift : christmasGift.getGifts()) {
+        for (AbstractCandy gift : christmasGift.getGifts()) {
             System.out.println(gift.toString());
         }
     }

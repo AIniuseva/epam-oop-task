@@ -1,11 +1,11 @@
 package com.epam.training.logic;
 
-import com.epam.training.model.ChristmasGifts;
+import com.epam.training.model.ChristmasGift;
 
 public interface ChristmasGiftLogic {
 
-    public double calculateGiftsPrice(ChristmasGifts christmasGift);
+    public double calculatePrice(ChristmasGift christmasGift);
 
-    public double calculateGiftsWeight(ChristmasGifts christmasGift);
+    public double calculateWeight(ChristmasGift christmasGift);
 
 }

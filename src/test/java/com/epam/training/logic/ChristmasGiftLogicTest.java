@@ -19,7 +19,7 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsPrice() {
         //when
-        double actualPrice = christmasGiftLogic.calculateGiftsPrice(createChristmasGiftsForTests());
+        double actualPrice = christmasGiftLogic.calculatePrice(createChristmasGiftsForTests());
         //then
         Assert.assertEquals(57.3, actualPrice, 0);
     }
@@ -27,9 +27,9 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsPriceWhenEmpty() {
         //given
-        ChristmasGifts christmasGifts = new ChristmasGifts();
+        ChristmasGift christmasGifts = new ChristmasGift();
         //when
-        double actualPrice = christmasGiftLogic.calculateGiftsPrice(christmasGifts);
+        double actualPrice = christmasGiftLogic.calculatePrice(christmasGifts);
         //then
         Assert.assertEquals(0, actualPrice, 0);
     }
@@ -37,7 +37,7 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsPriceWhenNull() {
         //when
-        double actualPrice = christmasGiftLogic.calculateGiftsPrice(null);
+        double actualPrice = christmasGiftLogic.calculatePrice(null);
         //then
         Assert.assertEquals(0, actualPrice, 0);
     }
@@ -45,7 +45,7 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsWeight() {
         //when
-        double actualWeight = christmasGiftLogic.calculateGiftsWeight(createChristmasGiftsForTests());
+        double actualWeight = christmasGiftLogic.calculateWeight(createChristmasGiftsForTests());
         //then
         Assert.assertEquals(144, actualWeight, 0);
     }
@@ -53,9 +53,9 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsWeightWhenEmpty() {
         //given
-        ChristmasGifts christmasGifts = new ChristmasGifts();
+        ChristmasGift christmasGifts = new ChristmasGift();
         //when
-        double actualWeight = christmasGiftLogic.calculateGiftsWeight(christmasGifts);
+        double actualWeight = christmasGiftLogic.calculateWeight(christmasGifts);
         //then
         Assert.assertEquals(0, actualWeight, 0);
     }
@@ -63,22 +63,23 @@ public class ChristmasGiftLogicTest {
     @Test
     public void testCalculateGiftsWeightWhenNull() {
         //when
-        double actualWeight = christmasGiftLogic.calculateGiftsWeight(null);
+        double actualWeight = christmasGiftLogic.calculateWeight(null);
         //then
         Assert.assertEquals(0, actualWeight, 0);
     }
 
-    private ChristmasGifts createChristmasGiftsForTests() {
-        ChristmasGifts christmasGifts = new ChristmasGifts();
+    private ChristmasGift createChristmasGiftsForTests() {
+        ChristmasGift christmasGifts = new ChristmasGift();
 
-        WoodenToy woodenToy = new WoodenToy(20.0, 30.0, "Name");
-        christmasGifts.add(woodenToy);
-        PlasticToy plasticToy = new PlasticToy(30.0, 80.0, "Name");
-        christmasGifts.add(plasticToy);
-        Lollipop lollipop = new Lollipop(5.0, 30.0, Shape.ROUND, Taste.LEMON);
-        christmasGifts.add(lollipop);
-        Chocolate chocolate = new Chocolate(2.3, 4.0, Shape.STAR);
-        christmasGifts.add(chocolate);
+        Lollipop lemonLollipop = new Lollipop(20.0, 30.0, Shape.ROUND, Taste.LEMON);
+        christmasGifts.add(lemonLollipop);
+        Lollipop appleLollipop = new Lollipop(5.0, 30.0, Shape.ROUND, Taste.APPLE);
+        christmasGifts.add(appleLollipop);
+
+        Chocolate starChocolate = new Chocolate(30.0, 80.0, Shape.STAR);
+        christmasGifts.add(starChocolate);
+        Chocolate roundChocolate = new Chocolate(2.3, 4.0, Shape.ROUND);
+        christmasGifts.add(roundChocolate);
 
         return christmasGifts;
     }

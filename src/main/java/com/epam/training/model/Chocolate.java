@@ -4,7 +4,7 @@ import com.epam.training.model.enums.Shape;
 
 import java.util.Objects;
 
-public class Chocolate extends Candy {
+public class Chocolate extends AbstractCandy {
 
     private boolean isDark;
 

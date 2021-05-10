@@ -5,7 +5,7 @@ import com.epam.training.model.enums.Taste;
 
 import java.util.Objects;
 
-public class Lollipop extends Candy {
+public class Lollipop extends AbstractCandy {
 
     private final Taste taste;
 
